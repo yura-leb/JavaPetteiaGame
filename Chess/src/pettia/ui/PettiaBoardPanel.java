@@ -1,5 +1,6 @@
 package pettia.ui;
 
+import game.ui.listeners.MovePieceListener;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
 
@@ -15,6 +16,7 @@ import pettia.pieces.Stone;
 public class PettiaBoardPanel extends AsiaBoard implements IPieceProvider {
 		public PettiaBoardPanel(Composite composite, Game game) {
 			super(composite, game.board);
+			listener = new MovePieceListener(this);
 		}
 
 		@Override
