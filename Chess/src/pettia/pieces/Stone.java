@@ -6,6 +6,10 @@ import game.core.PieceColor;
 import game.core.Square;
 import pettia.moves.SimpleMove;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Stone extends Piece {
 	public Stone(Square square, PieceColor color) {
 		super(square, color);
@@ -13,9 +17,15 @@ public class Stone extends Piece {
 
 	@Override
 	public boolean isCorrectMove(Square... squares) {
-		Square target = squares[0];
-		
-		return target.isEmpty();
+		Square source = this.square;
+
+		List<Square> moves = Arrays.stream(squares)
+				.filter(Square::isEmpty)
+				.filter(square -> square.isHorizontal(source) || square.isVertical(source))
+				.collect(Collectors.toList());
+
+
+		return !moves.isEmpty();
 	}
 
 	@Override

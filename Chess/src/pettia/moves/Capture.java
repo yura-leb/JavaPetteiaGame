@@ -2,11 +2,11 @@ package pettia.moves;
 
 import static java.util.stream.Collectors.toList;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import game.core.GameOver;
-import game.core.Piece;
-import game.core.Square;
+import game.core.*;
 import game.core.moves.ICaptureMove;
 
 public class Capture extends SimpleMove implements ICaptureMove {
@@ -32,9 +32,24 @@ public class Capture extends SimpleMove implements ICaptureMove {
 		return captured;
 	}
 
+	private void checkGameFinished(Board board) throws GameOver {
+		List<Piece> blackPieces = board.getPieces(PieceColor.BLACK);
+		List<Piece> whitePieces = board.getPieces(PieceColor.WHITE);
+
+		if (blackPieces.size() <= 1) {
+			throw new GameOver(GameResult.BLACK_WIN);
+		}
+
+		if (whitePieces.size() <= 1) {
+			throw new GameOver(GameResult.WHITE_WIN);
+		}
+	}
+
 	@Override
 	public void doMove() throws GameOver {
+//		captured.remove();
 		super.doMove();
+		checkGameFinished(target.getBoard());
 	}
 	
 	@Override
