@@ -9,7 +9,6 @@ import game.players.Vinni;
 import reversi.pieces.Hole;
 import reversi.pieces.Stone;
 import reversi.players.Ia;
-import reversi.players.Kanga;
 import reversi.players.Owl;
 import reversi.players.Rabbit;
 import reversi.players.Tiger;
@@ -30,7 +29,7 @@ public class Reversi extends Game {
         Game.addPlayer(Reversi.class, new Owl(pieceProvider));
         Game.addPlayer(Reversi.class, new Tiger(pieceProvider));
         Game.addPlayer(Reversi.class, new Rabbit(pieceProvider));
-        Game.addPlayer(Reversi.class, new Kanga(pieceProvider));
+
     }
 
     /**

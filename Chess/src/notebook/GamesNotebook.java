@@ -12,8 +12,6 @@ import backgammon.ui.BackgammonGamePanel;
 import backgammon.ui.images.BackgammonImages;
 import breakthrough.ui.BreakThroughGamePanel;
 import camelot.ui.CamelotPanel;
-import cannon.ui.CannonGamePanel;
-import cannon.ui.images.CannonImages;
 import checkers.ui.CheckersGamePanel;
 import checkers.ui.images.CheckersImages;
 import chess.ui.ChessGamePanel;
@@ -37,6 +35,7 @@ import lines.ui.LinesGamePanel;
 import linesofaction.ui.LinesOfActionPanel;
 import mingmang.ui.MingMangPanel;
 import notebook.ui.images.NotebookImages;
+import pettia.ui.PettiaGamePanel;
 import points.ui.PointsGamePanel;
 import rabbit.ui.RabbitGamePanel;
 import rabbit.ui.images.RabbitImages;
@@ -112,7 +111,7 @@ public class GamesNotebook {
 		// Добавление вкладок - игр.
 //        addCoffeeTab(gamesFolder);
 
-		addCannonTab(gamesFolder);
+		addPettiaTab(gamesFolder);
 		addKilkennyCats(gamesFolder);
 		addMingMangTab(gamesFolder);
 		addTshuPuTab(gamesFolder);
@@ -141,12 +140,12 @@ public class GamesNotebook {
 //		addGoTab(gamesFolder);
 		addHalma8x8Tab(gamesFolder);
 	}
-	
-    private static void addCannonTab(TabFolder folder) {
-        TabItem tabItem = new TabItem(folder, SWT.NONE);
-        tabItem.setControl(new CannonGamePanel(folder));
-        tabItem.setImage(smallIcon(CannonImages.cannon));
-        tabItem.setText("Cannon");
+
+	private static void addPettiaTab(TabFolder folder) {
+		TabItem tabItem = new TabItem(folder, SWT.NONE);
+		tabItem.setControl(new PettiaGamePanel(folder));
+		tabItem.setImage(smallIcon(GameImages.stoneGreen));
+		tabItem.setText("Pettia");
 	}
 
 	private static void addKilkennyCats(TabFolder folder) {

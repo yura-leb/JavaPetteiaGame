@@ -2,8 +2,6 @@ package camelot;
 
 import camelot.pieces.Knight;
 import camelot.pieces.Pawn;
-import camelot.players.Arthur;
-import camelot.players.Lancelot;
 import game.core.Game;
 import game.core.PieceColor;
 import game.players.IPlayer;
@@ -14,8 +12,6 @@ public class Camelot extends Game {
 	static {
 		addPlayer(Camelot.class, IPlayer.HOMO_SAPIENCE);
 		addPlayer(Camelot.class, new Neznaika());
-		addPlayer(Camelot.class, new Arthur());
-		addPlayer(Camelot.class, new Lancelot());
 	}
 
 	public Camelot() {

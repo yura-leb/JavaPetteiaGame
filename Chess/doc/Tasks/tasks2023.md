@@ -27,46 +27,31 @@ __2023-10-03_22:30__
 (Для студентов магистратуры)
 
 1.  **[Cannon (Пушка)](../GameRules/Cannon/_Cannon.md)**  
-  Тихонов Максим  
-  Егорова Елена  
+  --  
+  --  
 
 2. **[Coffee (Кофе)](../GameRules/Coffee4/COFFEE_EN.pdf)**  
-  Колесников Александр  
-  Скворцова Дарья 
+  --  
+  -- 
 
-3. **[Camelot (Камелот)](https://www.iggamecenter.com/ru/rules/camelot)**   
- Ковтун Данила    
- Сучков Александр  
+3. **[Camelot (Камелот)](https://www.iggamecenter.com/ru/rules/camelot)**  
+ --  
+ --  
  
-4. **[Hanniball (Ганнибал)](https://www.iggamecenter.com/ru/rules/hanniball)**  
+4.  **[Hanniball (Ганнибал)](https://www.iggamecenter.com/ru/rules/hanniball)**  
  Задорожная    
  Зайдуллин    
  
-5. **[Petteia](../GameRules/Petteia/_Petteia.md)**  
+5.  **[Petteia](../GameRules/Petteia/_Petteia.md)**  
  Лебединский Юрий  
  Веремчук Алексей 
- 
-6. **[Asalto](../GameRules/Asalto/Asalto.md)**  
- --  
- --  
-7. **[BaghChal](../GameRules/BaghChal/BaghChal.md)**  
- --  
- --   
-8. **[FiveFieldKono](../GameRules/FiveFieldKono/FiveFieldKono.md)**  
- Демьянов Иван  
- Панферов Виктор  
- -- 
-9. **[Zamma](../GameRules/Zamma/Zamma.md)**  
- --  
- --  
- 
  
 ## Алгоритмы (игроки-программы играющие в игры) 
 
 (Для студентов программы РКТ) 
  
 1. **Алгоритм игры в Реверси**  
- Алиева Асиман    
+ --  
  --   
  
 2. **Алгоритм игры Прорыв**  
@@ -80,7 +65,6 @@ __2023-10-03_22:30__
 4. **Алгоритм игры в шахматы**  
  Федоров    
  Титова   
- Рамазанов
 
 5. **Алгоритм игры в Волки и Заяц**  
  --  
