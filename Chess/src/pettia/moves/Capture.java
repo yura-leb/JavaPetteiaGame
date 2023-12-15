@@ -2,6 +2,7 @@ package pettia.moves;
 
 import static java.util.stream.Collectors.toList;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,18 +15,22 @@ public class Capture extends SimpleMove implements ICaptureMove {
 	 * Захваченные фигуры противника.
 	 */
 	private final List<Piece> captured;
+	private final List<Square> capturedSquares;
 
 	public Capture(List<Piece> captured, Square[] squares) {
 		super(null, squares);
 		this.captured = captured;
+		this.capturedSquares = new ArrayList<>();
+		for (Piece c : captured) {
+			capturedSquares.add(c.square);
+		}
+//		System.out.println(this.captured);
+
 	}
 
 	@Override
 	public List<Square> getCaptured() {
-		return captured
-			.stream()
-			.map(p -> p.square)
-			.collect( toList() );
+		return capturedSquares;
 	}
 
 	public List<Piece> getCapturedPieces() {
@@ -47,14 +52,27 @@ public class Capture extends SimpleMove implements ICaptureMove {
 
 	@Override
 	public void doMove() throws GameOver {
-//		captured.remove();
+
+        for (Piece c : captured) {
+            System.out.println(c);
+            c.remove();
+        }
 		super.doMove();
+
 		checkGameFinished(target.getBoard());
 	}
 	
 	@Override
 	public void undoMove() {
 		super.undoMove();
+
+		for (int i = 0; i < capturedSquares.size(); i++) {
+			Square square = capturedSquares.get(i);
+			Piece capturedPiece = captured.get(i);
+			if (square != null && capturedPiece != null) {
+				square.setPiece(capturedPiece);
+			}
+		}
 	}
 
 	public String toString() {

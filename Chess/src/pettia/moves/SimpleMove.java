@@ -41,7 +41,8 @@ public class SimpleMove implements ITransferMove {
 		source = squares[0];
 		target = squares[1];
 
-		piece = stone;
+		piece = source.getPiece();
+//		piece = stone;
 	}
 
 	@Override
@@ -57,7 +58,6 @@ public class SimpleMove implements ITransferMove {
 	@Override
 	public void doMove() throws GameOver {
 		piece.moveTo(target);
-//		checkGameFinished(target.getBoard());
 	}
 
 
