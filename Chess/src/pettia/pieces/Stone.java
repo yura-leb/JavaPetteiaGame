@@ -42,21 +42,11 @@ public class Stone extends Piece {
 		for (int v = 0; v < board.nV; v++) {
 			Square s = board.getSquare(v, hor);
 			Piece p = s.getPiece();
-			if (myColor == PieceColor.WHITE) {
-				if (p == null) {
-					System.out.println("null");
-				} else {
-					System.out.println(p + " " + p.getColor());
-				}
-			}
 			if (p != null && p.getColor() == myColor) {
 				if (left == -1) {
 					left = v;
 				}
 				right = v;
-				if (myColor == PieceColor.WHITE) {
-					System.out.println("vert" + " " + left + " " + right + " " + p);
-				}
 			}
 		}
 
@@ -78,9 +68,6 @@ public class Stone extends Piece {
 					bottom = h;
 				}
 				top = h;
-				if (myColor == PieceColor.WHITE) {
-					System.out.println("hor" + " " + bottom + " " + top + " " + p);
-				}
 			}
 		}
 		if (bottom != -1) {
@@ -92,7 +79,6 @@ public class Stone extends Piece {
 				}
 			}
 		}
-//		System.out.println(captured);
 
 		return captured;
 	}

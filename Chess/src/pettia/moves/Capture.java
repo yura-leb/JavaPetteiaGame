@@ -16,6 +16,8 @@ public class Capture extends SimpleMove implements ICaptureMove {
 	 */
 	private final List<Piece> captured;
 	private final List<Square> capturedSquares;
+	private final Square source;
+	private final Square target;
 
 	public Capture(List<Piece> captured, Square[] squares) {
 		super(null, squares);
@@ -24,8 +26,19 @@ public class Capture extends SimpleMove implements ICaptureMove {
 		for (Piece c : captured) {
 			capturedSquares.add(c.square);
 		}
-//		System.out.println(this.captured);
+		source = squares[0];
+		target = squares[1];
 
+	}
+
+	@Override
+	public Square getSource() {
+		return source;
+	}
+
+	@Override
+	public Square getTarget() {
+		return target;
 	}
 
 	@Override
@@ -54,7 +67,6 @@ public class Capture extends SimpleMove implements ICaptureMove {
 	public void doMove() throws GameOver {
 
         for (Piece c : captured) {
-            System.out.println(c);
             c.remove();
         }
 		super.doMove();
